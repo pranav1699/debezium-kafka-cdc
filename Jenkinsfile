@@ -15,7 +15,7 @@ pipeline {
    
     stage('Start containers') {
       steps {
-        bat 'docker-compose -p kafka-cdc up -d'
+        bat 'docker-compose -f docker-compose-test.yaml -p kafka-cdc up -d'
         bat 'docker-compose ps'
       }
     }
