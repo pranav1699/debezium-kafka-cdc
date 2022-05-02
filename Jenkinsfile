@@ -21,7 +21,7 @@ pipeline {
     }
     stage('move required files to container') {
       steps {
-        bat 'docker cp kafka-connect-jdbc-10.4.1.jar kafka-cdc-connect-1:kafka/libs '
+        bat 'docker cp etc/kafka-connect-jdbc-10.4.1.jar kafka-cdc-connect-1:kafka/libs '
       }
     }
   }
