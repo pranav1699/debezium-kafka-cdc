@@ -19,6 +19,10 @@ pipeline {
         bat 'docker-compose ps'
       }
     }
-    
+    stage('move required files to container') {
+      steps {
+        bat 'docker cp '
+      }
+    }
   }
 }
